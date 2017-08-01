@@ -1,4 +1,4 @@
-# Project burgers from school
+# Project burgers from Loftschool
 
 **Студент:** Олег Снига
 
