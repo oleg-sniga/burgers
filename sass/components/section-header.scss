@@ -38,18 +38,8 @@
   font-style: normal;
   text-transform: uppercase;
 }
-
-.btn-order {
+.header__top-btn {
   float: right;
-  padding:0 15px;
-  background: #e45028;
-  color: #fff;
-  border-radius: 3px;
-  text-decoration: none;
-  line-height: 34px;
-  &:hover {
-    background: #c1401e;
-  }
 }
   .main-nav {
     float: right;
@@ -145,7 +135,7 @@
     color: #fff;
     // outline: 1px solid yellow;
   }
-  .main__title--burger {
+  .section__title--burger {
     color: $ColorOrange;
     padding: 12px 0;
     margin-bottom: 20px;

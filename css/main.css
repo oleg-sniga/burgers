@@ -79,25 +79,39 @@ ul {
 .container {
   width: 940px;
   height: 100%;
-  min-height: 500px;
   margin: 0 auto;
   padding: 0; }
 
 .cont__not-padding {
   padding: 0; }
 
-.sections {
+.section {
   min-width: 100%;
   min-height: 650px;
   height: 100vh; }
 
-.main__title {
+.section__title {
   font-family: 'Gagalin';
   font-size: 70px;
   color: #2f3234;
   padding: 0;
   margin: 0;
   text-transform: uppercase; }
+
+.section__btn {
+  font-family: 'Ubuntu';
+  font-size: 13px;
+  font-weight: 700;
+  display: inline-block;
+  padding: 0 15px;
+  background: #e45028;
+  color: #fff;
+  border-radius: 3px;
+  text-decoration: none;
+  text-transform: uppercase;
+  line-height: 34px; }
+  .section__btn:hover {
+    background: #c1401e; }
 
 .header {
   background: url("../img/section-1.jpg") center no-repeat;
@@ -129,16 +143,8 @@ ul {
   font-style: normal;
   text-transform: uppercase; }
 
-.btn-order {
-  float: right;
-  padding: 0 15px;
-  background: #e45028;
-  color: #fff;
-  border-radius: 3px;
-  text-decoration: none;
-  line-height: 34px; }
-  .btn-order:hover {
-    background: #c1401e; }
+.header__top-btn {
+  float: right; }
 
 .main-nav {
   float: right; }
@@ -213,7 +219,7 @@ ul {
     line-height: 60px;
     letter-spacing: -1.5px;
     color: #fff; }
-  .header__burger .main__title--burger {
+  .header__burger .section__title--burger {
     color: #f9b43b;
     padding: 12px 0;
     margin-bottom: 20px;
@@ -226,7 +232,7 @@ ul {
 .container--best {
   position: relative; }
 
-.main__title--best {
+.section__title--best {
   text-align: center;
   margin-bottom: 50px; }
 
@@ -292,10 +298,10 @@ ul {
   background-size: cover;
   -webkit-filter: grayscale(1);
   filter: grayscale(1); }
-  .comments__item:hover .comment__content {
+  .comments__item:hover .comments__content {
     visibility: visible; }
 
-.comment__content {
+.comments__content {
   background: rgba(0, 0, 0, 0.7);
   width: 100%;
   min-width: 200px;
@@ -305,29 +311,17 @@ ul {
   color: #fff;
   visibility: hidden; }
 
-.comment__name {
+.comments__name {
   font-family: 'Gagalin';
   font-size: 14px;
   letter-spacing: 1px;
   margin: 7% auto;
   text-transform: uppercase; }
 
-.comment__text {
+.comments__text {
   font-family: 'Ubuntu';
   font-weight: lighter;
   line-height: 30px; }
 
-.comment_btn {
-  background: #2f3234;
-  font-family: 'Ubuntu';
-  font-size: 13px;
-  font-weight: 700;
-  text-transform: uppercase;
-  text-decoration: none;
-  display: inline-block;
-  padding: 10px 25px;
-  margin: 20px 0;
-  color: #fff;
-  border-radius: 5px; }
-  .comment_btn:hover {
-    background: #1f2122; }
+.section__btn--comments {
+  margin: 20px 0; }

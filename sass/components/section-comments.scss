@@ -18,12 +18,12 @@
   background-size: cover;
   filter: grayscale(1);
 
-  &:hover .comment__content {
+  &:hover .comments__content {
     visibility: visible;
   }
 }
 
-.comment__content {
+.comments__content {
   background: rgba(0,0,0, .7);
   width: 100%;
   min-width: 200px;
@@ -34,32 +34,18 @@
   visibility: hidden;
 }
 
-.comment__name {
+.comments__name {
   font-family: 'Gagalin';
   font-size: 14px;
   letter-spacing: 1px;
   margin: 7% auto;
   text-transform: uppercase;
 }
-.comment__text {
+.comments__text {
   font-family: 'Ubuntu';
   font-weight: lighter;
   line-height: 30px;
 }
-.comment_btn {
-  background: #2f3234;
-  font-family: 'Ubuntu';
-  font-size: 13px;
-  font-weight: 700;
-  text-transform: uppercase;
-  text-decoration: none;
-  display: inline-block;
-  padding: 10px 25px;
+.section__btn--comments {
   margin: 20px 0;
-  color: #fff;
-  border-radius: 5px;
-
-  &:hover {
-    background: #1f2122;
-  }
 }
