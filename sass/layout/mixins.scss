@@ -9,4 +9,20 @@
     clear: both;
   }
 }
-// @extend %clearfix;
+
+@mixin tablets {
+  @media screen and (max-width: $tablets) {
+    @content;
+  }
+}
+
+@mixin phones {
+  @media screen and (max-width: $phones) {
+    @content;
+  }
+}
+@mixin mphones {
+  @media screen and (max-width: $mphones) {
+    @content;
+  }
+}
