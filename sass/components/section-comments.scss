@@ -61,6 +61,7 @@
 .comments__text {
   font-family: 'Ubuntu';
   font-weight: lighter;
+  font-size: rem(14px);
   line-height: rem(30px);
   @include tablets() {
     line-height: rem(20px);

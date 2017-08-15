@@ -30,9 +30,10 @@ html {
 }
 .section {
   min-width: 100%;
-  min-height: rem(650px);
+  // min-height: rem(650px);
   height: 100vh;
   display: flex;
+  overflow: hidden;
   flex-direction: column;
   justify-content: center;
 }

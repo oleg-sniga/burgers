@@ -131,10 +131,7 @@
     display: block;
     width: rem(450px);
     @include tablets() {
-      width: rem(400px);
-    }
-    @include phones() {
-      width: rem(370px);
+      width: rem(350px);
     }
   }
   &__text {

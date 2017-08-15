@@ -109,12 +109,12 @@ p {
 
 .section {
   min-width: 100%;
-  min-height: 40.625rem;
   height: 100vh;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  overflow: hidden;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
   -webkit-flex-direction: column;
@@ -364,10 +364,7 @@ p {
     width: 28.125rem; }
     @media screen and (max-width: 768px) {
       .header__burger__img {
-        width: 25rem; } }
-    @media screen and (max-width: 480px) {
-      .header__burger__img {
-        width: 23.125rem; } }
+        width: 21.875rem; } }
   .header__burger__text {
     padding-top: 6.25rem;
     padding-left: 0.9375rem;
@@ -912,6 +909,7 @@ p {
 .comments__text {
   font-family: 'Ubuntu';
   font-weight: lighter;
+  font-size: 0.875rem;
   line-height: 1.875rem; }
   @media screen and (max-width: 768px) {
     .comments__text {
@@ -948,6 +946,9 @@ p {
 
 .order__wrapper {
   margin-top: -8.125rem; }
+  @media screen and (max-width: 768px) {
+    .order__wrapper {
+      margin-top: -1.875rem; } }
 
 .order--title {
   color: #f9b43b;
@@ -955,7 +956,10 @@ p {
   text-align: center; }
   @media screen and (max-width: 768px) {
     .order--title {
-      margin: 3.125rem auto; } }
+      margin: 1.25rem auto; } }
+  @media screen and (max-width: 480px) {
+    .order--title {
+      margin: 0.625rem auto; } }
 
 .order__form {
   width: 100%;
