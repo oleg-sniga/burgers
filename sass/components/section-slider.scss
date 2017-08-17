@@ -1,0 +1,119 @@
+.slider {
+  background: #f9b43b;
+  background-image: linear-gradient(to bottom, #f9b43b 20%, #eb8d38, #f9b43b );
+}
+
+.slider__wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: stretch;
+
+}
+
+.slider__left,
+.slider__right {
+  outline: 1px solid green;
+  width: 7%;
+}
+.slider__center {
+  width: 86%;
+  outline: 1px solid red;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.slider__image {
+  position: relative;
+}
+.slider__pic {
+  width: 100%;
+  margin: 70px auto;
+}
+.composition {
+
+  position: absolute;
+  display: flex;
+  flex-direction: row;
+
+  &__link {
+    position: relative;
+    text-decoration: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+
+  &__link:hover &__main {
+    background: $Red;
+  }
+  &__main {
+    background: $Orange;
+    width: 90px;
+    height: 90px;
+    padding:10px 15px;
+    border-radius: 7px;
+    // outline: 1px solid blue;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  &__svg {
+    width: 80%;
+    fill: #fff;
+  }
+  &__svg__text {
+    font-family: 'Gagalin';
+    font-size: 14px;
+    color: #fff;
+  }
+
+  &__list {
+    background: rgba(255,255,255,.9);
+    padding: 15px;
+    border-radius: 7px;
+    position: absolute;
+    left: 100%;
+  }
+}
+
+.slider__text {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  margin-left: 20px;
+  margin-bottom: 120px;
+  width: 50%;
+}
+.slider--title {
+  color: #fff;
+  line-height: 65px;
+}
+.slider__text p {
+  font-family: 'Ubuntu', Arial;
+  font-size: 14px;
+  font-weight: lighter;
+  line-height: 24px;
+  margin: 30px auto;
+  color: #fff;
+}
+.slider__price {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items:baseline;
+}
+.price {
+  font-family: 'Gagalin';
+  font-size: 30px;
+  color: $Red;
+  margin-right: 30px;
+
+  span {
+    font-size: 72px;
+  }
+}
