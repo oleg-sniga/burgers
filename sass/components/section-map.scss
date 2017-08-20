@@ -5,10 +5,13 @@
 .footer {
   background: url('../img/fon-footer.jpg') center center no-repeat;
   background-size: cover;
-  // height: rem(60px);
+  height: rem(60px);
   position: absolute;
   bottom: 0;
   width: 100%;
+  @include phones() {
+    height: auto;
+  }
 }
 .footer--container {
   display: flex;

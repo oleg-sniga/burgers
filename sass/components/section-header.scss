@@ -52,9 +52,7 @@
 .main-nav {
   display: flex;
   flex-direction: row;
-  // outline: 1px solid green;
     &__list {
-      // outline: 1px solid red;
       display: flex;
       justify-content: flex-start;
     }
@@ -78,7 +76,6 @@
         content: none;
       }
   }
-
   &__link {
     color: #fff;
     text-decoration: none;
