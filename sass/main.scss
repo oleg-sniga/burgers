@@ -1,6 +1,10 @@
+//media
+@import "layout/media.scss";
+
 // Config
 @import "layout/variables.scss";
 @import "layout/mixins.scss";
+
 
 // Base
 @import "layout/fonts.scss";
@@ -9,4 +13,9 @@
 
 @import "components/section-header.scss";
 @import "components/section-best.scss";
+@import "components/section-slider.scss";
+@import "components/section-team.scss";
+@import "components/section-menu.scss";
 @import "components/section-comments.scss";
+@import "components/section-order.scss";
+@import "components/section-map.scss";

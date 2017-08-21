@@ -1,0 +1,94 @@
+.menu {
+  background: url("../img/section-5.jpg") center no-repeat;
+  background-size: cover;
+}
+.menu__wrapper {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.menu__title {
+  // border: 1px solid #fff;
+  flex: auto;
+  position: relative;
+  .title--menu {
+    position: absolute;
+    color: #fff;
+    top: rem(100px);
+    left: rem(100px);
+  }
+}
+.menu__content {
+  // border: 1px solid #fff;
+  position: relative;
+}
+.menu__list {
+  // position: absolute;
+  // display: flex;
+  // flex-direction: column;
+  // justify-content: center;
+  height: 100%;
+  // outline: 2px solid red;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+}
+.menu__item {
+  // outline: 1px solid #000;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  flex: auto;
+}
+.item__link {
+  font-family: 'Gagalin';
+  font-size: rem(40px);
+  background: url('../img/sprite-accordeon.png') no-repeat;
+  background-size: cover;
+  height: 100%;
+  width: rem(80px);
+  overflow: hidden;
+  text-decoration: none;
+  position: relative;
+}
+.link--meat {
+  background-position: 0 center;
+}
+.link--vegetarian {
+  background-position: center center;
+}
+.link--dietary {
+  background-position: right center;
+}
+.item__link-text {
+  white-space: nowrap;
+  color: #fff;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform:rotate(-90deg) translate(-50%,-50%);
+  transform-origin: 0 0;
+}
+.item__text {
+  font-family: 'Ubuntu';
+  font-size: rem(14px);
+  font-weight: 400;
+  line-height: rem(26px);
+  width: 0;
+  display: block;
+  overflow: hidden;
+  background: rgba(50,53,54, .9);
+  color: #fff;
+}
+.item__text--active {
+  // width: rem(440px);
+  width: 50vw;
+}
+.item__text p {
+  margin: rem(60px) rem(35px);
+  @include tablets() {
+    margin:rem(20px);
+  }
+}

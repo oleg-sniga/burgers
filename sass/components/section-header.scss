@@ -1,144 +1,186 @@
-.header {
+.hero {
   background: url("../img/section-1.jpg") center no-repeat;
   background-size: cover;
+  justify-content: flex-start;
+}
+.container--header {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
-.header__top {
+.header {
   // outline: 2px solid red;
-  @extend %clearfix;
+  display: flex;
+  flex-direction: row;
 }
-.header__top-left {
-  float: left;
-  padding-top: 12px;
-  width: 30%;
+.header__left {
+  padding-top: rem(12px);
+  width: 14%;
   // outline: 1px solid #fff;
 }
 .logo {
-  width: 92px;
-  height: 70px;
-  margin: 0 0 -2px -3px;
+  width: rem(92px);
+  height: rem(70px);
+  margin: 0 0 rem(-2px) -rem(3px);
   &__link {
     display: inline-block;
   }
   &__img {
-    width: 92px;
-    height: 70px;
+    width: rem(92px);
+    height: rem(70px);
     display: block;
     margin: 0;
   }
 }
 
-.header__top-right {
-  float: left;
-  padding-top: 28px;
-  width: 70%;
+.header__right {
+  padding-top: rem(28px);
+  width: 86%;
   // outline: 1px solid #fff;
   font-family: "Ubuntu";
-  font-size: 13px;
+  font-size: rem(13px);
   font-style: normal;
   text-transform: uppercase;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: flex-start;
+  flex-wrap: wrap;
 }
-.header__top-btn {
-  float: right;
-}
-  .main-nav {
-    float: right;
+
+.main-nav {
+  display: flex;
+  flex-direction: row;
     &__list {
-      @extend %clearfix;
+      display: flex;
+      justify-content: flex-start;
     }
     &__item {
-      float: left;
-      margin-right: 16px;
-      line-height: 34px;
+      // outline: 1px solid #fff;
+      display: inline-flex;
+      margin-right: rem(16px);
+      line-height: rem(34px);
+      flex-direction: row;
+      align-items: center;
 
       &::after {
-        content: " ";
+        content: "";
         background: #fff;
-        margin-left: 15px;
-        margin-bottom: 2px;
-        display: inline-block;
-        width: 4px;
-        height: 4px;
+        margin-left: rem(15px);
+        width: rem(4px);
+        height: rem(4px);
         border-radius: 50%;
       }
       &:last-child::after {
         content: none;
       }
   }
-
   &__link {
     color: #fff;
     text-decoration: none;
   }
+  @include tablets() {
+    display: none;
+  }
 }
 
-.nav-section {
-  position: fixed;
-  width: 16px;
-  right: 5%;
-  top: 100px;
+.header__right-btn {
+  // outline: 1px solid red;
+}
+.hamburger-menu {
+  margin-left: rem(30px);
+  // outline: 1px solid red;
+  width: rem(30px);
+  height: rem(35px);
+  align-items: center;
+  display: none;
 
-  &__item {
-    margin-bottom: 5px;
-  }
-
-  &__link {
-    width: 16px;
-    height: 16px;
-    border: 1px solid transparent;
-    border-radius: 50%;
+  .hamburger-menu__btn {
+    background: url('../img/humburger-menu.png') center center no-repeat;
+    background-size: cover;
+    width: rem(30px);
+    height: rem(30px);
     display: block;
-    position: relative;
-    &::before {
-      content: " ";
-      width: 6px;
-      height: 6px;
-      border-radius: 50%;
-      display: block;
-      background: #fff;
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-    }
   }
-  &__link:hover,
-  &__link--active {
-    border-color: #fff;
+
+  @include tablets() {
+    display: flex;
   }
 }
 
 .header__bottom {
-  // outline: 2px solid red;
-  padding-top: 25px;
+  margin-top: rem(-100px);
+  @include tablets() {
+    margin-top: 0;
+  }
 }
 .header__burger {
-  padding: 0 15px;
+  padding: 0 rem(15px);
   margin: 0;
-  /*outline: 1px solid #ccc;*/
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  // outline: 1px solid #ccc;
   &__img {
-    float: left;
     // outline: 1px solid yellow;
     display: block;
-    width: 451px;
+    width: rem(450px);
+    @include tablets() {
+      width: rem(350px);
+    }
   }
   &__text {
-    float: left;
-    padding-top: 100px;
-    padding-left: 15px;
+    padding-top: rem(100px);
+    padding-left: rem(15px);
     display: block;
-    width: 450px;
+    width: rem(450px);
     font-family: 'Lifehack';
-    font-size: 65px;
-    line-height: 60px;
-    letter-spacing: -1.5px;
+    font-size: rem(65px);
+    line-height: rem(60px);
+    letter-spacing: rem(-1.5px);
     color: #fff;
     // outline: 1px solid yellow;
+    @include tablets() {
+      padding-top: rem(10px);
+      text-align: center;
+    }
+    @include phones() {
+      padding-top: rem(50px);
+    }
   }
   .section__title--burger {
-    color: $ColorOrange;
-    padding: 12px 0;
-    margin-bottom: 20px;
-    letter-spacing: 1px;
+    color: $Yellow;
+    padding: rem(12px) 0;
+    margin-bottom: rem(20px);
+    letter-spacing: rem(1px);
+    @include tablets() {
+      margin-bottom: 0;
+    }
+  }
+
+  @include tablets() {
+    flex-direction: column;
+  }
+}
+
+.header__arrow-down {
+  display: flex;
+  justify-content: center;
+  .arrow-down__link {
+    width: rem(30px);
+    height: rem(20px);
+    display: block;
+    margin-bottom: rem(40px);
+  }
+  .arrow-down__img {
+    width: 100%;
+    display: block;
+  }
+  .arrow-down__svg {
+    width: 100%;
+    height: 100%;
+    fill: #fff;
   }
 }

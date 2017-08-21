@@ -1,0 +1,262 @@
+.slider {
+  background: #f9b43b;
+  background-image: linear-gradient(to bottom, #f9b43b 20%, #eb8d38, #f9b43b );
+}
+
+.slider__wrapper {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: stretch;
+
+}
+
+.slider__left,
+.slider__right {
+  // outline: 1px solid green;
+  width: 7%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  @include phones() {
+    position: absolute;
+  }
+}
+.slider__left {
+  @include phones() {
+    left: 0;
+    top: 50%;
+  }
+}
+.slider__right {
+  justify-content: flex-start;
+  @include phones() {
+    right: 0;
+    top: 50%;
+  }
+}
+.slider__arrow {
+  width: rem(30px);
+  height: rem(30px);
+  fill: #fff;
+}
+.arrow--right {
+  transform: rotate(270deg);
+}
+.arrow--left {
+  transform: rotate(90deg);
+}
+.slider__center {
+  width: 86%;
+  // outline: 1px solid red;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+
+  @include tablets() {
+    flex-direction: column;
+  }
+  @include phones() {
+    width: 100%;
+  }
+}
+
+.slider__image {
+  position: relative;
+  // outline: 1px solid red;
+}
+.slider__img {
+  // outline: 1px solid gray;
+  @include tablets() {
+    padding: rem(60px) rem(10px) rem(40px);
+  }
+  @include phones() {
+    padding: 90px 40px 20px 40px;
+  }
+}
+.slider__pic {
+  width: 100%;
+  margin: rem(70px) auto;
+  display: block;
+  @include tablets() {
+    margin: rem(10px) auto;
+  }
+}
+.composition {
+  position: absolute;
+  display: flex;
+  flex-direction: row;
+
+  &__link {
+    position: relative;
+    text-decoration: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+
+  &__link:hover &__main {
+    background: $Red;
+  }
+  &__link:hover &__list {
+    display: block;
+  }
+  &__main {
+    background: $Orange;
+    width: 90px;
+    height: 90px;
+    padding:rem(10px) rem(15px);
+    border-radius: rem(7px);
+    // outline: 1px solid blue;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  &__svg {
+    width: 80%;
+    fill: #fff;
+  }
+  &__svg__text {
+    font-family: 'Gagalin';
+    font-size: rem(14px);
+    color: #fff;
+  }
+
+  &__list {
+    background: rgba(255,255,255,.9);
+    padding:rem(15px) rem(20px);
+    border-radius: rem(7px);
+    position: absolute;
+    left: 100%;
+    font-family: 'Ubuntu';
+    font-size: rem(14px);
+    color: $BlackText;
+    display: none;
+  }
+  &__item {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: rem(10px);
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+  .comp__svg {
+    display: block;
+    width: rem(45px);
+    height: rem(45px);
+    fill: $Red;
+    // outline: 1px solid black;
+  }
+  .svg--cheese,
+  .svg--buns {
+    fill: $Yellow;
+  }
+  .svg--salad,
+  .svg--cucumber {
+    fill: $Green;
+  }
+  .comp__product {
+    margin-left: rem(30px);
+    width: rem(100px);
+    font-weight: medium;
+    overflow: hidden;
+  }
+  .comp__amount {
+    text-align: right;
+    width: rem(60px);
+    font-weight: lighter;
+  }
+}
+
+.kkal {
+  bottom: 0;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 80px;
+  height: 80px;
+  opacity: .5;
+  @include tablets() {
+    right: 0;
+    top: 0;
+  }
+  &__svg {
+    width: 60px;
+    height: 60px;
+    fill: #fff;
+  }
+  &__num{
+    font-family: 'Gagalin';
+    font-size: 20px;
+    display: block;
+  }
+  &__text {
+    font-family: 'Gagalin';
+    font-size: 14px;
+    color: #fff;
+  }
+}
+
+
+.slider__text {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  margin-left: rem(20px);
+  margin-bottom: rem(120px);
+  width: 50%;
+  @include tablets() {
+    text-align: center;
+    align-items: center;
+    width: 100%;
+    margin-left:0;
+    margin-bottom: 0;
+    padding: 0 10%;
+  }
+  @include phones() {
+    padding: 0 5%;
+  }
+  // outline: 1px solid green;
+}
+.slider--title {
+  color: #fff;
+  line-height: rem(65px);
+}
+.slider__text p {
+  font-family: 'Ubuntu', Arial;
+  font-size: rem(14px);
+  font-weight: lighter;
+  line-height: rem(24px);
+  margin: rem(30px) auto;
+  color: #fff;
+  @include phones() {
+    font-size: rem(16px);
+    margin: rem(20px) auto;
+  }
+}
+.slider__price {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items:baseline;
+}
+.price {
+  font-family: 'Gagalin';
+  font-size: rem(30px);
+  color: $Red;
+  margin-right: rem(30px);
+
+  span {
+    font-size: rem(72px);
+  }
+}

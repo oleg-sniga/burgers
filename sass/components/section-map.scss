@@ -1,0 +1,88 @@
+.map {
+  background: url('../img/section-8.jpg') center center no-repeat;
+  background-size: cover;
+}
+.footer {
+  background: url('../img/fon-footer.jpg') center center no-repeat;
+  background-size: cover;
+  height: rem(60px);
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  @include phones() {
+    height: auto;
+  }
+}
+.footer--container {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  @include phones() {
+    flex-direction: column;
+  }
+}
+.footer__left, .footer__right {
+  width: 50%;
+  @include phones() {
+    width: 100%;
+  }
+  // outline: 1px solid #fff;
+}
+.footer__text {
+  font-family: 'Ubuntu';
+  font-size: rem(14px);
+  color: #fff;
+  margin-top: rem(5px);
+  @include phones() {
+    margin-top: rem(15px);
+    text-align: center;
+  }
+}
+.footer__phone {
+  color: #e45028;
+  margin-top: rem(5px);
+  font-weight: bold;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  @include phones() {
+    justify-content: center;
+  }
+}
+.footer__phone span {
+  display: inline-block;
+}
+.phone__icon {
+  margin-right: rem(5px);
+  fill: #e45028;
+  width: rem(12px);
+  height: rem(12px);
+}
+.socials {
+  display: flex;
+  justify-content: flex-end;
+  margin-right: 0;
+  margin-top: rem(18px);
+  @include phones() {
+    justify-content: center;
+    margin-bottom: rem(18px);
+  }
+}
+.socials__link {
+  // background: url('../img/sprite-icons-socials.png') no-repeat;
+  // background-position: 0 center;
+  width: rem(20px);
+  height: rem(20px);
+  display: block;
+  margin-left: rem(20px);
+  opacity: .3;
+  &:hover {
+    opacity: 1;
+  }
+}
+.socials__icons {
+  fill: #fff;
+  width: rem(20px);
+  height: rem(20px);
+}
