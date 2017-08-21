@@ -1,0 +1,130 @@
+.team {
+  background: url("../img/section-4.jpg") center no-repeat;
+  background-size: cover;
+}
+.team__container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: flex-end;
+}
+.team__content {
+  background: rgba(50,53,54, .9);
+  width: 50%;
+  height: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  @include tablets() {
+    width: 100%;
+    // text-align: center;
+  }
+}
+.team__block {
+  // outline: 1px solid yellow;
+  margin:5% 10%;
+  width: 80%;
+  @include tablets() {
+    text-align: center;
+  }
+}
+.team__title {
+  color: $Yellow;
+  margin-bottom: rem(80px);
+}
+.team__list {
+  // outline: 1px solid green;
+}
+.team__item {
+  margin-bottom: rem(35px);
+
+  &--active {
+    .team__data-person {
+      height: auto;
+    }
+
+    .team__name {
+      color: $Yellow;
+      &::before{
+        transform: rotate(180deg);
+      }
+    }
+  }
+  @include tablets() {
+    text-align: center;
+  }
+}
+.team__name {
+  font-family: 'Gagalin';
+  font-size: rem(14px);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  margin-bottom: rem(15px);
+  // outline: 1px solid red;
+  &::before{
+    content: "";
+    width: 0;
+    height: 0;
+    margin-right: rem(10px);
+
+    border-left: rem(6px) solid transparent;
+    border-top:  rem(9px) solid $Yellow;
+    border-right: rem(6px) solid transparent;
+  }
+  @include tablets() {
+    text-align: center;
+    justify-content: center;
+    font-size: rem(25px);
+  }
+  @include phones() {
+    text-align: center;
+    justify-content: center;
+    font-size: rem(20px);
+  }
+}
+.team__data-person {
+  display: flex;
+  justify-content: flex-start;
+  height: 0;
+  overflow: hidden;
+  @include tablets() {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
+.data-person__ava {
+  width: rem(100px);
+  height: rem(100px);
+  border-radius: 50%;
+  overflow: hidden;
+  position: relative;
+}
+.data-person__image {
+  margin:0 rem(20px);
+}
+.data-person__img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 100%;
+}
+.data-person__text {
+  font-family: 'Ubuntu';
+  width: 65%;
+}
+.data-person__title {
+  color: #fff;
+  font-weight: bold;
+  font-size: rem(15px);
+  margin-bottom: rem(10px);
+  @include tablets() {
+    margin-top: rem(10px);
+  }
+}
+.data-person__desc {
+  color: #fff;
+  font-size: rem(14px);
+}
