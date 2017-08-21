@@ -30,16 +30,22 @@ $(document).ready(function() {
           hintContent: 'Тут бургер'
         });
         myBurger2 = new ymaps.Placemark([59.94496018, 30.38184127], {
-          hintContent: 'Москва!',
-          balloonContent: 'Столица России'
+          balloonContentHeader: 'Mister Burger',
+          balloonContentBody: 'Здесь смакуют сочные бургеры',
+          balloonContentFooter: 'Да, здесь они, имено здесь',
+          hintContent: 'Тут бургер'
         });
         myBurger3 = new ymaps.Placemark([59.91463246, 30.49273452], {
-          hintContent: 'Москва!',
-          balloonContent: 'Столица России'
+          balloonContentHeader: 'Mister Burger',
+          balloonContentBody: 'Здесь смакуют сочные бургеры',
+          balloonContentFooter: 'Да, здесь они, имено здесь',
+          hintContent: 'Тут бургер'
         });
         myBurger4 = new ymaps.Placemark([59.88928059, 30.31557998], {
-          hintContent: 'Москва!',
-          balloonContent: 'Столица России'
+          balloonContentHeader: 'Mister Burger',
+          balloonContentBody: 'Здесь смакуют сочные бургеры',
+          balloonContentFooter: 'Да, здесь они, имено здесь',
+          hintContent: 'Тут бургер'
         });
 
         myBurgers.add(myBurger1).add(myBurger2).add(myBurger3).add(myBurger4);
