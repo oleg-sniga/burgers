@@ -45,13 +45,16 @@
 .item__link {
   font-family: 'Gagalin';
   font-size: rem(40px);
-  background: url('../img/sprite-accordeon.png') no-repeat;
+  background-image: url('../img/sprite-accordeon.png');
+  background-color: rgba(0,0,0,.6);
+  background-blend-mode: darken;
   background-size: cover;
   height: 100%;
   width: rem(80px);
   overflow: hidden;
   text-decoration: none;
   position: relative;
+  // filter: brightness(20%);
 }
 .link--meat {
   background-position: 0 center;
