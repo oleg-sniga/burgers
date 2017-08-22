@@ -1643,8 +1643,10 @@ p {
   margin-left: 1.25rem; }
 
 .map {
-  background: url("../img/section-8.jpg") center center no-repeat;
-  background-size: cover;
+  background: -webkit-gradient(linear, left top, left bottom, from(#F6EFD2), to(#ccc));
+  background: -webkit-linear-gradient(top, #F6EFD2, #ccc);
+  background: -o-linear-gradient(top, #F6EFD2, #ccc);
+  background: linear-gradient(to bottom, #F6EFD2, #ccc);
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
