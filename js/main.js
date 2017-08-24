@@ -169,7 +169,12 @@ $('#order-form').on('submit', submitForm);
     var position = (-screen * 100) + '%';
 
     pages.eq(screen).addClass('active-scroll').siblings().removeClass('active-scroll');
-    console.log(position);
+    var secionId = pages.eq(screen).attr('id');
+    var navLink = $('.nav-section__link');
+    
+    navLink.removeClass('nav-section__link--active');
+    navLink.filter('[href="#'+secionId+'"]').addClass('nav-section__link--active');
+
     container.css('top',position);
     setTimeout(function(){
       inscroll = false;
