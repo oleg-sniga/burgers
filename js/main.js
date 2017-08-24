@@ -155,6 +155,39 @@ var ajaxForm = function (form) {
     });
 
 }
-
 $('#order-form').on('submit', submitForm);
+
+
+  var screen = 0,
+      container = $('.main'),
+      pages = $('.section'),
+      inscroll = false;
+
+      $('.section:first-child').addClass('active-scroll');
+  $('body').on('mousewheel',function(event){
+
+    var activeSection = pages.filter('.active-scroll');
+
+    if (!inscroll) {
+      inscroll = true;
+      if (event.deltaY > 0){
+        if (activeSection.prev().length){
+          screen--;
+        }
+      } else {
+        if (activeSection.next().length){
+          screen++;
+        }
+      }
+    }
+
+    var position = (-screen * 100) + '%';
+
+    pages.eq(screen).addClass('active-scroll').siblings().removeClass('active-scroll');
+    console.log(position);
+    container.css('top',position);
+    setTimeout(function(){
+      inscroll = false;
+    },1300);
+  });
 });

@@ -10,11 +10,16 @@ html {
   }
 }
 .wrapper {
-  position: relative;
-  width: 100%;
   //min-width: rem(940px) + rem(20px);
-  min-height: 100%;
+  height: 100%;
   overflow: hidden;
+}
+.main {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  top: 0;
+  transition: top 1s ease;
 }
 .container {
   width: 95%;
@@ -68,7 +73,7 @@ html {
   width: rem(16px);
   right: rem(40px);
   top: rem(100px);
-
+  z-index: 30;
   &__item {
     margin-bottom: rem(5px);
   }

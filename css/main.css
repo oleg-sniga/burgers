@@ -88,10 +88,17 @@ p {
     font-size: 0.75rem; } }
 
 .wrapper {
-  position: relative;
-  width: 100%;
-  min-height: 100%;
+  height: 100%;
   overflow: hidden; }
+
+.main {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  top: 0;
+  -webkit-transition: top 1s ease;
+  -o-transition: top 1s ease;
+  transition: top 1s ease; }
 
 .container {
   width: 95%;
@@ -153,7 +160,8 @@ p {
   position: fixed;
   width: 1rem;
   right: 2.5rem;
-  top: 6.25rem; }
+  top: 6.25rem;
+  z-index: 30; }
   .nav-section__item {
     margin-bottom: 0.3125rem; }
   .nav-section__link {
@@ -1747,6 +1755,7 @@ p {
   background: -webkit-linear-gradient(top, #F6EFD2, #ccc);
   background: -o-linear-gradient(top, #F6EFD2, #ccc);
   background: linear-gradient(to bottom, #F6EFD2, #ccc);
+  position: relative;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
