@@ -76,7 +76,7 @@
   white-space: normal;
   display: inline-flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content: center; 
   align-items: center;
   z-index: 10;
   @include tablets() {
