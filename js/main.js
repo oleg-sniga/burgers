@@ -54,4 +54,107 @@ $(document).ready(function() {
         //myMap.geoObjects.add(myBurger1).add(myBurger2).add(myBurger3).add(myBurger4);
     }
 
+    $('.team__btn').on('click', function(e){// Меню акордеон в секцыи team
+      e.preventDefault();
+
+      var elem = $(this).closest('.team__item');
+      if (!elem.hasClass('team__item--active')) {
+        $('.team__item').removeClass('team__item--active');
+        elem.addClass('team__item--active');
+      }
+    });
+
+    $('.item__link').on('click', function(e){// Меню акордеон в секцыи manu
+      e.preventDefault();
+
+      var elem = $(this).siblings('.item__text');
+      if (!elem.hasClass('team__item--active')) {
+        $('.item__text').removeClass('item__text--active');
+        elem.addClass('item__text--active');
+      }
+    });
+
+    function Slider(){
+      $('.slider__btn').on('click',function(){
+
+        var slider = $('.slider__list');
+        var items = slider.find('.slider__item');
+        var slideActive = items.filter('.slider--active');
+        var reqItemN = slideActive.next();
+        var reqItemP = slideActive.prev();
+
+          if ($(this).hasClass('slider__btn--next')){
+            if (reqItemN.length){
+              var reqIndex = reqItemN.index();
+              posElem = -reqIndex * 100;
+
+              $('.slider__list').animate({"left": posElem+"%"},1000,function(){
+                slideActive.removeClass('slider--active');
+                reqItemN.addClass('slider--active');
+              });
+            }
+          } else {
+
+            if (reqItemP.length){
+              var reqIndex = reqItemP.index();
+              posElem = -reqIndex * 100;
+
+              $('.slider__list').animate({"left": posElem+"%"},1000,function(){
+                slideActive.removeClass('slider--active');
+                reqItemP.addClass('slider--active');
+              });
+            }
+          }
+
+      });
+    }
+    Slider();
+
+$('.section__btn--modal').on('click', function(){
+  $('.form__modal').fadeToggle();
+});
+    var submitForm = function (ev) {
+      ev.preventDefault();
+    // console.log(ev);
+
+    var form = $(ev.target);
+
+    var request = ajaxForm(form);
+
+    request.done(function(msg) {
+        var mes = msg.mes,
+            status = msg.status;
+        if (status === 'OK') {
+          $('.form__modal').fadeToggle(function(){
+            $(this).children('.modal__text').text(mes);
+          });
+
+            // form.append('<p class="success">' + mes + '</p>');
+        } else{
+          $('.form__modal').fadeToggle(function(){
+            $(this).children('.modal__text').text(mes);
+          });
+            // form.append('<p class="error">' + mes + '</p>');
+        }
+    });
+
+    request.fail(function(jqXHR, textStatus) {
+        alert("Request failed: " + textStatus);
+    });
+}
+
+var ajaxForm = function (form) {
+
+    var url = form.attr('action'),
+        data = form.serialize();
+    return $.ajax({
+        type: 'POST',
+        url: url,
+        data: data,
+        dataType: 'JSON'
+    });
+
+}
+
+$('#order-form').on('submit', submitForm);
 });
