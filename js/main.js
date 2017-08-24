@@ -16,42 +16,27 @@ $(document).ready(function() {
             zoom: 12
         });
 
+        var coords = [
+          [59.97250671, 30.31077346],
+          [59.94496018, 30.38184127],
+          [59.91463246, 30.49273452],
+          [59.88928059, 30.31557998]
+        ],
         myBurgers = new ymaps.GeoObjectCollection({}, {
           iconLayout: 'default#image',
           iconImageHref: 'img/icons/map-marker.svg',
           iconImageSize: [46, 57],
           iconImageOffset: [-23, -55]
         });
-
-        myBurger1 = new ymaps.Placemark([59.97250671, 30.31077346], {
-          balloonContentHeader: 'Mister Burger',
-          balloonContentBody: 'Здесь смакуют сочные бургеры',
-          balloonContentFooter: 'Да, здесь они, имено здесь',
-          hintContent: 'Тут бургер'
-        });
-        myBurger2 = new ymaps.Placemark([59.94496018, 30.38184127], {
-          balloonContentHeader: 'Mister Burger',
-          balloonContentBody: 'Здесь смакуют сочные бургеры',
-          balloonContentFooter: 'Да, здесь они, имено здесь',
-          hintContent: 'Тут бургер'
-        });
-        myBurger3 = new ymaps.Placemark([59.91463246, 30.49273452], {
-          balloonContentHeader: 'Mister Burger',
-          balloonContentBody: 'Здесь смакуют сочные бургеры',
-          balloonContentFooter: 'Да, здесь они, имено здесь',
-          hintContent: 'Тут бургер'
-        });
-        myBurger4 = new ymaps.Placemark([59.88928059, 30.31557998], {
-          balloonContentHeader: 'Mister Burger',
-          balloonContentBody: 'Здесь смакуют сочные бургеры',
-          balloonContentFooter: 'Да, здесь они, имено здесь',
-          hintContent: 'Тут бургер'
-        });
-
-        myBurgers.add(myBurger1).add(myBurger2).add(myBurger3).add(myBurger4);
+        for (var i= 0; i < coords.length; i++){
+          myBurgers.add(new ymaps.Placemark(coords[i],{
+            balloonContentHeader: 'Mister Burger',
+            balloonContentBody: 'Здесь смакуют сочные бургеры',
+            balloonContentFooter: 'Да, здесь они, имено здесь',
+            hintContent: 'Тут бургер'
+          }));
+        }
         myMap.geoObjects.add(myBurgers);
-
-        //myMap.geoObjects.add(myBurger1).add(myBurger2).add(myBurger3).add(myBurger4);
     }
 
     $('.team__btn').on('click', function(e){// Меню акордеон в секцыи team
