@@ -35,15 +35,17 @@
 .team__list {
   // outline: 1px solid green;
 }
+
 .team__item {
   margin-bottom: rem(35px);
 
   &--active {
     .team__data-person {
       height: auto;
+      opacity: 1;
     }
 
-    .team__name {
+    .team__btn {
       color: $Yellow;
       &::before{
         transform: rotate(180deg);
@@ -57,11 +59,30 @@
 .team__name {
   font-family: 'Gagalin';
   font-size: rem(14px);
-  color: #fff;
-  display: flex;
-  align-items: center;
   margin-bottom: rem(15px);
   // outline: 1px solid red;
+  @include tablets() {
+    text-align: center;
+    justify-content: center;
+    font-size: rem(25px);
+  }
+  @include phones() {
+    text-align: center;
+    justify-content: center;
+    font-size: rem(20px);
+  }
+}
+.team__btn {
+  display: inline-flex;
+  align-items: center;
+  color: #fff;
+  text-decoration: none;
+  font-family: 'Gagalin';
+  font-size: rem(14px);
+  margin-bottom: rem(15px);
+  transition: all .4s ease;
+  // outline: 1px solid red;
+
   &::before{
     content: "";
     width: 0;
@@ -88,6 +109,8 @@
   justify-content: flex-start;
   height: 0;
   overflow: hidden;
+  opacity: 0;
+  transition: opacity .6s ease;
   @include tablets() {
     flex-direction: column;
     justify-content: center;

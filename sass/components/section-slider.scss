@@ -4,21 +4,22 @@
 }
 
 .slider__wrapper {
-  position: relative;
+  height: 100%;
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: stretch;
-
+  position: relative;
 }
 
 .slider__left,
 .slider__right {
   // outline: 1px solid green;
-  width: 7%;
+  width: 8vw;
   display: flex;
   justify-content: flex-end;
   align-items: center;
+  z-index: 20;
   @include phones() {
     position: absolute;
   }
@@ -54,13 +55,30 @@
   transform: rotate(90deg);
 }
 .slider__center {
-  width: 86%;
-  // outline: 1px solid red;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
+  width: 84vw;
+  position: relative;
+  flex-grow: 1;
+  z-index: 3;
 
+  overflow: hidden;
+}
+.slider__list {
+  width: 100%;
+  white-space: nowrap;
+  display: block;
+  font-size: 0;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+}
+.slider__item {
+  white-space: normal;
+  display: inline-flex;
+  flex-direction: row;
+  justify-content: center; 
+  align-items: center;
+  z-index: 10;
   @include tablets() {
     flex-direction: column;
   }
@@ -74,7 +92,7 @@
   // outline: 1px solid red;
 }
 .slider__img {
-  // outline: 1px solid gray;
+  display: block;
   @include tablets() {
     padding: rem(60px) rem(10px) rem(40px);
   }
@@ -235,7 +253,6 @@
   @include phones() {
     padding: 0 5%;
   }
-  // outline: 1px solid green;
 }
 .burger__title {
   font-family: 'Gagalin';
@@ -245,6 +262,7 @@
   text-transform: uppercase;
   color: #fff;
   line-height: rem(65px);
+  overflow: hidden;
 }
 .slider__text p {
   font-family: 'Ubuntu', Arial;
