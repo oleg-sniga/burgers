@@ -53,7 +53,7 @@ html {
   padding:0 rem(15px);
   background: #e45028;
   color: #fff;
-  border-radius: rem(3px);
+  border-radius: rem(5px);
   text-decoration: none;
   text-transform: uppercase;
   line-height: rem(34px);
@@ -101,4 +101,68 @@ html {
   @include tablets() {
     display: none;
   }
+}
+
+.full-window {
+  display: none;
+  background: #2f3234;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 10;
+}
+.full__top {
+  display: flex;
+  justify-content: space-between;
+  height: 15%;
+}
+.full--logo {
+  margin: 10px 20px;
+}
+.full__close {
+  background: url('../img/full-close.png') center center no-repeat;
+  background-size: cover;
+  display: block;
+  width: 20px;
+  height: 20px;
+  margin-top: 30px;
+  margin-right: 35px;
+}
+.full-nav {
+  height: 85%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+    &__item {
+      display: inline-flex;
+      line-height: rem(34px);
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+      &::after {
+        content: "";
+        display: block;
+        background: #fff;
+        width: rem(7px);
+        height: rem(7px);
+        border-radius: 50%;
+        margin: rem(15px) auto;
+      }
+      &:last-child::after {
+        content: none;
+      }
+    }
+
+    &__link {
+      font-family: 'Ubuntu';
+      font-weight: normal;
+      font-size: rem(24px);
+      text-transform: uppercase;
+      color: #fff;
+      text-decoration: none;
+    }
 }
