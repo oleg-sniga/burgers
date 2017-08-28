@@ -46,6 +46,8 @@ $(document).ready(function() {
       if (!elem.hasClass('team__item--active')) {
         $('.team__item').removeClass('team__item--active');
         elem.addClass('team__item--active');
+      } else {
+        elem.removeClass('team__item--active');
       }
     });
 
@@ -53,9 +55,11 @@ $(document).ready(function() {
       e.preventDefault();
 
       var elem = $(this).siblings('.item__text');
-      if (!elem.hasClass('team__item--active')) {
+      if (!elem.hasClass('item__text--active')) {
         $('.item__text').removeClass('item__text--active');
         elem.addClass('item__text--active');
+      } else {
+        elem.removeClass('item__text--active');
       }
     });
 
