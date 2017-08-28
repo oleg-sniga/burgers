@@ -21,16 +21,11 @@
   }
 }
 .menu__content {
-  // border: 1px solid #fff;
   position: relative;
 }
 .menu__list {
-  // position: absolute;
-  // display: flex;
-  // flex-direction: column;
-  // justify-content: center;
   height: 100%;
-  // outline: 2px solid red;
+
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
@@ -80,18 +75,30 @@
   font-weight: 400;
   line-height: rem(26px);
   width: 0;
+  box-sizing: border-box;
   display: block;
   overflow: hidden;
   background: rgba(50,53,54, .9);
   color: #fff;
+  transition: all .6s ease;
+}
+
+.item__text p {
+  margin: rem(60px) rem(35px);
+  opacity: 0;
+  transition: all 1s ease;
+  @include tablets() {
+    margin:rem(20px);
+  }
 }
 .item__text--active {
   // width: rem(440px);
   width: 50vw;
-}
-.item__text p {
-  margin: rem(60px) rem(35px);
+  p {
+    opacity: 1;
+  }
   @include tablets() {
-    margin:rem(20px);
+    width: auto;
+    flex-grow: 1;
   }
 }
