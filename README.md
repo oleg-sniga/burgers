@@ -7,4 +7,4 @@
 **Курс:** Веб для начинающих **07.2017**
           или Веб-разработчик **13 июня 2017**
 
-**Демо:** https://mast777.github.io/burgers/
+**Демо:** https://oleg-sniga.github.io/burgers/
